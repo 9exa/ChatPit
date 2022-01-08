@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ChatPit.Chat">
+	<DockPanel Background="Wheat">
+		<Image Source="/Assets/icon.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+		<StackPanel Spacing="40" DockPanel.Dock="Top">
+			<!--Button Content="{Binding ButtonText}" Command="{Binding ButtonClicked}"/-->
+			<TextBlock Text="Messages" HorizontalAlignment="Center"/>
+			<!--Place for putting messages-->
+			<ContentControl Content="{Binding Messages}" HorizontalAlignment="Center" />
+			
+		</StackPanel>
+		<StackPanel Spacing="10" Canvas.Bottom="0" DockPanel.Dock="Bottom" Height="0">
+			<TextBox Watermark="Your Message" Text="{Binding BoxText}"  Width="300"/>
+			<Button Content="Add Message" Command="{Binding ButtonClicked}" HorizontalAlignment="Center"/>
+		</StackPanel>
+	</DockPanel>
+</UserControl>

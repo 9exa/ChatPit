@@ -1,0 +1,13 @@
+We're making a chatbox app, just a simple local one to develope my skills
+
+a2 is the Frontend program
+
+ChatData is te SQL Server server amd databases storing info of app 
+should probably breakup project into namespace and folders but whatever
+
+as for styles. 
+Googles C# styleguide https://google.github.io/styleguide/csharp-style.html
+SQL Server styleguide by Simon Holywell https://www.sqlstyle.guide/
+
+TODO: Login and Password functionalty
+XML documentation

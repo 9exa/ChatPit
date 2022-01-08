@@ -1,0 +1,9 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:views="clr-namespace:a2"
+        x:Class="ChatPit.Window1"
+        Title="ChatPit -- Your Favourite chat application!"
+        Icon="/Assets/icon.png"
+		Width="800" Height="400"
+		Content="{Binding Content}">
+</Window>

@@ -1,0 +1,39 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ChatPit.SignInPage">
+	<Panel Name="MainPanel" Background="AntiqueWhite">
+		<StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+			<TextBlock Name="Title" Text="Welcome to ChatPit" HorizontalAlignment="Center"/>
+			<Image Source="/Assets/icon.png" Height="50"/>
+		</StackPanel>
+
+		<StackPanel Name="LoginFields" Spacing="25" VerticalAlignment="Center">
+			<Panel Name="Error Box" Background="LightSalmon" Height="50" Width="300"
+				   IsVisible="{Binding ErrorVisible}" >
+				<TextBlock Text="{Binding ErrorString}"
+						   HorizontalAlignment="Center" VerticalAlignment="Center"
+						   TextAlignment="Center"/>
+			</Panel>
+			<TextBlock Text="Sign In" HorizontalAlignment="Center"/>
+			
+			<DockPanel>
+				<TextBlock Text="Username: " Width="100" DockPanel.Dock="Left" TextAlignment="Left"/>
+				<TextBox DockPanel.Dock="Right" Text="{Binding Username}"/>
+			</DockPanel>
+			<DockPanel>
+				<TextBlock Text="Password:" Width="100" DockPanel.Dock="Left" TextAlignment="Left"/>
+				<TextBox DockPanel.Dock="Right" Text="{Binding Password}" PasswordChar="*"/>
+			</DockPanel>	
+			<TextBlock Text="Chat Room / Server Setup" HorizontalAlignment="Center"/>
+			<DockPanel>
+				<TextBlock Text="Database File Location:" Width="180" DockPanel.Dock="Left" TextAlignment="Left"/>
+				<TextBox DockPanel.Dock="Right" Text="{Binding DBLoc}"/>
+			</DockPanel>
+			<Button Content="Login" Command="{Binding OnSignInPressed}" HorizontalAlignment="Center" Width="250" Height="50"/>
+			
+		</StackPanel>
+	</Panel>
+</UserControl>
